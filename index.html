@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quebrador de Hash de Senhas Curtas - Alura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔑 Força Bruta: Senhas Curtas</h1>
+        <p class="description">
+            Defina uma senha secreta de até 3 caracteres para que o algoritmo descubra por força bruta mostrando o progresso em tempo real.
+        </p>
+
+        <!-- Configuração da Senha -->
+        <div class="card">
+            <h2>1. Configurar Senha Alvo</h2>
+            <div class="input-group">
+                <input type="password" id="senha-alvo" maxlength="3" placeholder="Ex: a1z" />
+                <button id="btn-revelar" type="button">👁️</button>
+            </div>
+            <div id="info-hash" class="hash-badge">Hash Gerado: -</div>
+            <button id="btn-iniciar" style="margin-top: 1rem;">Iniciar Força Bruta</button>
+        </div>
+
+        <!-- Painel de Progresso -->
+        <div class="card">
+            <h2>2. Progresso da Busca</h2>
+            
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar">0%</div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-label">Tentativa Atual</span>
+                    <span id="stat-tentativa" class="stat-value">-</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Total Testado</span>
+                    <span id="stat-count" class="stat-value">0 / 0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Tempo</span>
+                    <span id="stat-tempo" class="stat-value">0.00s</span>
+                </div>
+            </div>
+
+            <div id="resultado" class="result-box hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
